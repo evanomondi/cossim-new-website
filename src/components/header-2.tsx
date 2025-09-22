@@ -31,7 +31,21 @@ export default function Header2() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-prose flex h-14 items-center">
-        <div className="mr-4 flex">
+        {/* Desktop Logo */}
+        <div className="mr-4 flex md:flex hidden">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/cossim-logo.svg"
+              alt="Cossim Logo"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
+            />
+          </Link>
+        </div>
+        
+        {/* Mobile Logo - Centered */}
+        <div className="flex md:hidden flex-1 justify-center">
           <Link href="/" className="flex items-center">
             <Image
               src="/cossim-logo.svg"
@@ -86,11 +100,8 @@ export default function Header2() {
           </Link>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="flex md:hidden items-center space-x-2">
-          <Button size="sm" asChild className="mr-2">
-            <Link href="/contact">Get Started</Link>
-          </Button>
+        {/* Mobile Navigation - Hamburger Menu on Far Right */}
+        <div className="flex md:hidden absolute right-4">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button 

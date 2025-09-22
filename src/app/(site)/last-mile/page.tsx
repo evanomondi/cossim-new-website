@@ -286,7 +286,7 @@ export default async function LastMilePage() {
             your logistics needs and find the right solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
+            <Button variant="secondary" asChild>
               <Link href="/contact">Get a Quote</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
