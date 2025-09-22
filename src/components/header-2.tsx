@@ -212,7 +212,7 @@ export default function Header2() {
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <span>📞</span>
-                        <span>+254</span>
+                        <span>+254 74655 6931</span>
                       </div>
                     </div>
                   </div>
