@@ -18,7 +18,7 @@ interface TrackingResult {
   status: string
   estimatedDelivery: string
   currentLocation: string
-  timeline: TimeNneEvent[]
+  timeline: TimelineEvent[]
 }
 
 export default function TrackPage() {

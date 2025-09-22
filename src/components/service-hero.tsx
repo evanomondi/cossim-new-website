@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { PixelBlastBackground } from '@/components/pixel-blast-background'
 import { Section } from '@/components/sections'
 import Link from 'next/link'
+import type { Route } from 'next'
 import { cn } from '@/lib/utils'
 import { 
   TruckIcon,
@@ -81,11 +82,11 @@ export function ServiceHero({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="text-lg px-8 py-6" asChild>
-                <Link href={primaryCTA.href}>{primaryCTA.label}</Link>
+                <Link href={primaryCTA.href as Route}>{primaryCTA.label}</Link>
               </Button>
               {secondaryCTA && (
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
-                  <Link href={secondaryCTA.href}>{secondaryCTA.label}</Link>
+                  <Link href={secondaryCTA.href as Route}>{secondaryCTA.label}</Link>
                 </Button>
               )}
             </div>

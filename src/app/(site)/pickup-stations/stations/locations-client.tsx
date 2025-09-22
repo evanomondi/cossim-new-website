@@ -80,7 +80,7 @@ export default function LocationsClient({ stations }: LocationsClientProps) {
               All Counties
             </DropdownMenuItem>
             {counties.map(county => (
-              <DropdownMenuItem key={county} onClick={() => setSelectedCounty(county)}>
+              <DropdownMenuItem key={county} onClick={() => setSelectedCounty(county || "")}>
                 {county}
               </DropdownMenuItem>
             ))}

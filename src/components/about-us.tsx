@@ -29,13 +29,13 @@ export default function AboutUsSection() {
                                 while someone else handled the complex dance of getting products to customers?
                             </p>
                             <p>
-                                <span className="font-semibold text-orange-600">Founded in 2017</span>, Cossim began as an answer to that question. <mcreference link="https://cossim.co.ke/about/" index="1">1</mcreference> 
+                                <span className="font-semibold text-orange-600">Founded in 2017</span>, Cossim began as an answer to that question. 
                                 We saw businesses struggling with the last mile - that crucial final step where products 
                                 reach the people who need them.
                             </p>
                             <p>
                                 Today, we're Kenya's trusted logistics partner. We manage over <span className="font-semibold">150 active vehicles</span> and 
-                                handle <span className="font-semibold">1,000+ parcels daily</span>. <mcreference link="https://cossim.co.ke/about/" index="2">2</mcreference> But numbers tell only part of our story.
+                                handle <span className="font-semibold">1,000+ parcels daily</span>. But numbers tell only part of our story.
                             </p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@ export default function AboutUsSection() {
                                     <div>
                                         <h3 className="font-semibold mb-2">Largest Heavy Goods Provider</h3>
                                         <p className="text-muted-foreground">
-                                            When size matters, we deliver. <mcreference link="https://cossim.co.ke/about/" index="2">2</mcreference> From furniture to machinery, 
+                                            When size matters, we deliver. From furniture to machinery, 
                                             we handle what others can't.
                                         </p>
                                     </div>
@@ -181,12 +181,12 @@ export default function AboutUsSection() {
                             "At Cossim, we prioritize treating our clients with care and respect. 
                             We believe in tailoring our last mile logistics solutions to meet their unique needs, 
                             maintaining transparency and open communication, and providing expert guidance 
-                            to help them achieve their goals." <mcreference link="https://cossim.co.ke/" index="1">1</mcreference>
+                            to help them achieve their goals."
                         </blockquote>
                     </div>
                     <div className="pt-6">
                         <p className="text-lg">
-                            <span className="font-semibold">We think about logistics, so you don't have to.</span> <mcreference link="https://ke.linkedin.com/company/cossim-limited" index="3">3</mcreference>
+                            <span className="font-semibold">We think about logistics, so you don't have to.</span>
                         </p>
                     </div>
                 </div>
