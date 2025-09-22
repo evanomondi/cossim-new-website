@@ -1,0 +1,24 @@
+{
+  "tagline": "Kenya's B2B logistics partner",
+  "headline": "Last-mile, Pickup Stations, and Warehousing",
+  "sub": "Express 1hr, same day, next day. Shelf rental and customer pickup across Kenya. Storage and fulfillment for growth.",
+  "ctas": [
+    {"label": "Get a quote", "href": "/contact"},
+    {"label": "View services", "href": "#services"}
+  ],
+  "features": [
+    "Express 1hr within Nairobi",
+    "Same-day and next-day tiers",
+    "Pickup stations with rent-a-shelf",
+    "Storage and fulfillment (on-prem available)"
+  ],
+  "stats": [
+    {"label": "Avg on-time", "value": "98%"},
+    {"label": "Pickup points", "value": "150+"},
+    {"label": "Counties covered", "value": "40+"}
+  ],
+  "faqs": [
+    {"q": "Do you support COD?", "a": "Yes — rider or agent-initiated MPesa push for eligible flows."},
+    {"q": "Do you serve up-country?", "a": "Yes, with next-day and two-day options by corridor."}
+  ]
+}

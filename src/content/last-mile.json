@@ -1,0 +1,12 @@
+{
+  "headline": "Last-mile delivery",
+  "sub": "Express 1hr, same day, next day in Kenya",
+  "tiers": [
+    {"name": "Express 1hr", "desc": "CBD and select zones", "cta": "Contact sales"},
+    {"name": "Same day", "desc": "Order by midday", "cta": "Get rates"},
+    {"name": "Next day", "desc": "Nationwide corridors", "cta": "Talk to us"}
+  ],
+  "faqs": [
+    {"q": "Cut-off times?", "a": "Express all-day; same-day cutoff at 12:00; next-day pickups at 16:00."}
+  ]
+}

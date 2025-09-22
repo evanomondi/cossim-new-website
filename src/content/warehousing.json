@@ -1,0 +1,13 @@
+{
+  "headline": "Warehousing & Fulfillment",
+  "sub": "Secure storage and inventory management solutions for growing businesses",
+  "tiers": [
+    {"name": "Shared Storage", "desc": "Cost-effective shared warehouse space", "cta": "Get quote"},
+    {"name": "Dedicated Space", "desc": "Your own warehouse section", "cta": "Learn more"},
+    {"name": "Full Fulfillment", "desc": "Complete order processing", "cta": "Contact sales"}
+  ],
+  "faqs": [
+    {"q": "Do you offer inventory management?", "a": "Yes, we provide full inventory tracking and management through our dashboard."},
+    {"q": "Can you handle fragile items?", "a": "Yes, we have specialized handling for fragile, temperature-sensitive, and high-value items."}
+  ]
+}

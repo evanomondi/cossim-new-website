@@ -1,0 +1,13 @@
+{
+  "headline": "Pickup Stations",
+  "sub": "Convenient pickup locations with rent-a-shelf options across Kenya",
+  "tiers": [
+    {"name": "Basic Pickup", "desc": "Standard pickup locations", "cta": "Find locations"},
+    {"name": "Rent-a-Shelf", "desc": "Your branded shelf space", "cta": "Get pricing"},
+    {"name": "Premium Stations", "desc": "High-traffic locations", "cta": "Contact us"}
+  ],
+  "faqs": [
+    {"q": "How many pickup stations do you have?", "a": "We have 150+ pickup stations across 40+ counties in Kenya."},
+    {"q": "Can customers pick up 24/7?", "a": "Most stations operate 8AM-8PM, with select 24/7 locations in major cities."}
+  ]
+}
