@@ -1,9 +1,6 @@
 import { Section } from '@/components/sections'
-import { load } from '@/lib/load-content'
-import { ServiceContent } from '@/types/content'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import ContentSection from '@/components/content-7'
 import { ServiceHero } from '@/components/service-hero'
@@ -54,7 +51,6 @@ const logisticsServices = [
 ]
 
 export default async function LastMilePage() {
-  const data = await load<ServiceContent>('last-mile')
 
   return (
     <main className="min-h-screen">
@@ -190,25 +186,25 @@ export default async function LastMilePage() {
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Logistics Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="p-3 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <ShieldCheckIcon className="h-8 w-8 text-blue-600" />
+                <div className="p-3 bg-primary/10 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <ShieldCheckIcon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Reliable Service</h3>
-                <p className="text-gray-600">99.5% on-time delivery rate with real-time tracking and updates</p>
+                <p className="text-muted-foreground">99.5% on-time delivery rate with real-time tracking and updates</p>
               </div>
               <div className="text-center">
-                <div className="p-3 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <CurrencyDollarIcon className="h-8 w-8 text-blue-600" />
+                <div className="p-3 bg-primary/10 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <CurrencyDollarIcon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Competitive Pricing</h3>
-                <p className="text-gray-600">Transparent pricing with no hidden fees and bulk delivery discounts</p>
+                <p className="text-muted-foreground">Transparent pricing with no hidden fees and bulk delivery discounts</p>
               </div>
               <div className="text-center">
-                <div className="p-3 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <PhoneIcon className="h-8 w-8 text-blue-600" />
+                <div className="p-3 bg-primary/10 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <PhoneIcon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock customer support for all your delivery needs</p>
+                <p className="text-muted-foreground">Round-the-clock customer support for all your delivery needs</p>
               </div>
             </div>
           </div>
@@ -226,7 +222,7 @@ export default async function LastMilePage() {
                   <CardTitle className="text-lg">What is the difference between first, middle, and last mile?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     First mile is picking up goods from your location. Middle mile moves goods between 
                     warehouses and distribution centers. Last mile delivers directly to your customers.
                   </p>
@@ -237,7 +233,7 @@ export default async function LastMilePage() {
                   <CardTitle className="text-lg">How do dedicated rider services work?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     You get assigned riders who work exclusively for your business during set hours. 
                     They learn your routes, customers, and delivery preferences for better service.
                   </p>
@@ -248,7 +244,7 @@ export default async function LastMilePage() {
                   <CardTitle className="text-lg">What size packages can your vans handle?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Our vans can carry packages up to 1000kg and handle bulk deliveries. 
                     Perfect for furniture, appliances, and large business orders.
                   </p>
@@ -259,7 +255,7 @@ export default async function LastMilePage() {
                   <CardTitle className="text-lg">Do you provide same-day delivery?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Yes, we offer same-day delivery within Nairobi and select towns. 
                     Orders placed before 2 PM can be delivered the same day.
                   </p>
@@ -270,7 +266,7 @@ export default async function LastMilePage() {
                   <CardTitle className="text-lg">How do you track deliveries?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     All deliveries are tracked in real-time. You and your customers get SMS updates 
                     and can track packages online from pickup to delivery.
                   </p>
@@ -282,7 +278,7 @@ export default async function LastMilePage() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="py-16 bg-blue-600 text-white">
+      <Section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your Logistics Partnership</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -293,7 +289,7 @@ export default async function LastMilePage() {
             <Button size="lg" variant="secondary" asChild>
               <Link href="/contact">Get a Quote</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600" asChild>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
               <Link href="/pickup-stations">Find Pickup Stations</Link>
             </Button>
           </div>

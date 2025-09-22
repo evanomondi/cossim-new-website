@@ -42,34 +42,26 @@ export default function HeroSection4({
   const textVariants = {
     hidden: { 
       opacity: 0, 
-      y: 30,
+      y: 20,
       scale: 0.95
     },
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
+      scale: 1
     }
   }
 
   const headlineVariants = {
     hidden: { 
       opacity: 0, 
-      y: 50,
-      scale: 0.9
+      y: 30,
+      scale: 0.95
     },
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 1,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
+      scale: 1
     }
   }
 
@@ -82,11 +74,7 @@ export default function HeroSection4({
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
+      scale: 1
     }
   }
 
@@ -101,12 +89,7 @@ export default function HeroSection4({
       opacity: 1, 
       x: 0,
       scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 1.2,
-        ease: [0.25, 0.1, 0.25, 1],
-        delay: 0.3
-      }
+      rotate: 0
     }
   }
 
@@ -117,12 +100,7 @@ export default function HeroSection4({
     },
     visible: { 
       opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1],
-        delay: 0.5
-      }
+      y: 0
     }
   }
 
@@ -133,11 +111,7 @@ export default function HeroSection4({
     },
     visible: { 
       opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1.5,
-        ease: [0, 0, 1, 1]
-      }
+      scale: 1
     }
   }
 
@@ -148,12 +122,7 @@ export default function HeroSection4({
     },
     visible: { 
       opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1],
-        delay: 0.8
-      }
+      y: 0
     }
   }
 

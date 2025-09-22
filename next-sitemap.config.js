@@ -5,7 +5,7 @@ module.exports = {
   priority: 0.7,
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  outDir: 'out',
+  outDir: 'public',
   transform: async (config, path) => {
     return { 
       loc: path, 

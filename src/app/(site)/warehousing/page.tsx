@@ -1,6 +1,4 @@
 import { Section } from '@/components/sections'
-import { load } from '@/lib/load-content'
-import { ServiceContent } from '@/types/content'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -9,10 +7,8 @@ import FeaturesSection from '@/components/features-section'
 import { ServiceHero } from '@/components/service-hero'
 import { 
   ArchiveBoxIcon,
-  BuildingOffice2Icon,
   TruckIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   LinkIcon,
   ClockIcon,
   CurrencyDollarIcon
@@ -52,8 +48,6 @@ const warehousingFeatures = [
 ]
 
 export default async function WarehousingPage() {
-  const data = await load<ServiceContent>('warehousing')
-  
   return (
     <main>
       {/* Hero Section */}
@@ -90,14 +84,14 @@ export default async function WarehousingPage() {
       <Section className="bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Here's the thing about order fulfillment:</h2>
+            <h2 className="text-2xl font-bold mb-6">Here&apos;s the thing about order fulfillment:</h2>
             <p className="text-lg mb-4">
               Every successful business reaches a point where storing products in your garage, spare room, or office becomes impossible. 
               You need space. You need systems. You need people who know how to pick the right product, pack it properly, and get it to your customer fast.
             </p>
             <p className="text-lg mb-4">
-              That's where we come in. We're not just a warehouse - we're your fulfillment partner. 
-              When a customer clicks "buy" on your website, we spring into action. We find their product, pack it with care, and ship it the same day.
+              That&apos;s where we come in. We&apos;re not just a warehouse - we&apos;re your fulfillment partner. 
+              When a customer clicks &ldquo;buy&rdquo; on your website, we spring into action. We find their product, pack it with care, and ship it the same day.
             </p>
             <p className="text-lg mb-6">
               <strong>The result?</strong> Happy customers who get their orders fast. More time for you to focus on marketing, product development, and growth. 
@@ -202,7 +196,7 @@ export default async function WarehousingPage() {
       <Section className="bg-ink-100">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            From Your Warehouse to Your Customer's Door
+            From Your Warehouse to Your Customer&apos;s Door
           </h2>
           <p className="text-lg text-muted-foreground">
             Our proven 4-step process ensures your products reach customers quickly and safely
@@ -221,7 +215,7 @@ export default async function WarehousingPage() {
               02
             </div>
             <h3 className="text-xl font-semibold mb-2">Real-Time Tracking</h3>
-            <p className="text-muted-foreground">Watch your inventory levels, track depletion rates, and get alerts when it's time to reorder. All in one dashboard.</p>
+            <p className="text-muted-foreground">Watch your inventory levels, track depletion rates, and get alerts when it&apos;s time to reorder. All in one dashboard.</p>
           </div>
           <div className="text-center">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-xl font-bold mb-4">

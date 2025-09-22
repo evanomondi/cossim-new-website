@@ -114,7 +114,7 @@ export default function LocationsClient({ stations }: LocationsClientProps) {
           <div className="flex gap-2">
             {q && (
               <Badge variant="outline" className="text-xs">
-                Search: "{q}"
+                Search: &ldquo;{q}&rdquo;
               </Badge>
             )}
             {selectedCounty && (

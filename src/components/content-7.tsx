@@ -1,5 +1,4 @@
 import { Truck, Clock } from 'lucide-react'
-import Image from 'next/image'
 
 export default function ContentSection() {
     return (

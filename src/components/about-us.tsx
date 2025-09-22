@@ -1,7 +1,6 @@
 "use client"
 
 import { Package, Truck, MapPin, Shield, Clock, Users } from 'lucide-react'
-import Image from 'next/image'
 
 export default function AboutUsSection() {
     return (
@@ -13,7 +12,7 @@ export default function AboutUsSection() {
                         About Cossim
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        We don't just move packages. We move possibilities.
+                        We don&apos;t just move packages. We move possibilities.
                     </p>
                 </div>
 
@@ -34,7 +33,7 @@ export default function AboutUsSection() {
                                 reach the people who need them.
                             </p>
                             <p>
-                                Today, we're Kenya's trusted logistics partner. We manage over <span className="font-semibold">150 active vehicles</span> and 
+                                Today, we&apos;re Kenya&apos;s trusted logistics partner. We manage over <span className="font-semibold">150 active vehicles</span> and 
                                 handle <span className="font-semibold">1,000+ parcels daily</span>. But numbers tell only part of our story.
                             </p>
                         </div>
@@ -103,8 +102,8 @@ export default function AboutUsSection() {
                             </div>
                             <h3 className="text-xl font-semibold">Reliability</h3>
                             <p className="text-muted-foreground">
-                                Promises kept. Deadlines met. Trust earned. We do what we say we'll do, 
-                                when we say we'll do it.
+                                Promises kept. Deadlines met. Trust earned. We do what we say we&apos;ll do, 
+                                when we say we&apos;ll do it.
                             </p>
                         </div>
                     </div>
@@ -118,7 +117,7 @@ export default function AboutUsSection() {
                                 Why businesses choose Cossim
                             </h2>
                             <p className="text-lg text-muted-foreground">
-                                We're not just another logistics company. We're your growth partner.
+                                We&apos;re not just another logistics company. We&apos;re your growth partner.
                             </p>
                         </div>
 
@@ -130,7 +129,7 @@ export default function AboutUsSection() {
                                         <h3 className="font-semibold mb-2">Largest Heavy Goods Provider</h3>
                                         <p className="text-muted-foreground">
                                             When size matters, we deliver. From furniture to machinery, 
-                                            we handle what others can't.
+                                            we handle what others can&apos;t.
                                         </p>
                                     </div>
                                 </div>
@@ -152,7 +151,7 @@ export default function AboutUsSection() {
                                         <h3 className="font-semibold mb-2">Nationwide Coverage</h3>
                                         <p className="text-muted-foreground">
                                             From Nairobi to Mombasa, Kisumu to Eldoret. Our 22+ pickup stations 
-                                            mean we're always close to your customers.
+                                            mean we&apos;re always close to your customers.
                                         </p>
                                     </div>
                                 </div>
@@ -178,15 +177,15 @@ export default function AboutUsSection() {
                     </h2>
                     <div className="max-w-4xl mx-auto">
                         <blockquote className="text-xl italic text-muted-foreground leading-relaxed">
-                            "At Cossim, we prioritize treating our clients with care and respect. 
+                            &ldquo;At Cossim, we prioritize treating our clients with care and respect. 
                             We believe in tailoring our last mile logistics solutions to meet their unique needs, 
                             maintaining transparency and open communication, and providing expert guidance 
-                            to help them achieve their goals."
+                            to help them achieve their goals.&rdquo;
                         </blockquote>
                     </div>
                     <div className="pt-6">
                         <p className="text-lg">
-                            <span className="font-semibold">We think about logistics, so you don't have to.</span>
+                            <span className="font-semibold">We think about logistics, so you don&apos;t have to.</span>
                         </p>
                     </div>
                 </div>
@@ -199,7 +198,7 @@ export default function AboutUsSection() {
                         </h2>
                         <p className="text-xl opacity-90 max-w-2xl mx-auto">
                             Join hundreds of businesses who trust Cossim with their logistics. 
-                            Let's move your business forward, together.
+                            Let&apos;s move your business forward, together.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                             <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">

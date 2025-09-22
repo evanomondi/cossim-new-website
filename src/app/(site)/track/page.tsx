@@ -168,7 +168,7 @@ export default function TrackPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-4">
-              If you can't find your tracking number or need assistance, please contact our support team.
+              If you can&apos;t find your tracking number or need assistance, please contact our support team.
             </p>
             <div className="flex gap-4">
               <Button variant="outline">

@@ -2,8 +2,7 @@ import { Section } from '@/components/sections'
 import { load } from '@/lib/load-content'
 import { ServiceContent } from '@/types/content'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 import { ServiceHero } from '@/components/service-hero'
 
@@ -14,9 +13,7 @@ import {
   DevicePhoneMobileIcon,
   ClockIcon,
   CreditCardIcon,
-  CheckCircleIcon,
-  TruckIcon,
-  ShieldCheckIcon
+  CheckCircleIcon
 } from '@heroicons/react/24/outline'
 
 const pickupStationFeatures = [
@@ -229,7 +226,7 @@ export default async function PickupStationsPage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-muted-foreground mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.location}</p>

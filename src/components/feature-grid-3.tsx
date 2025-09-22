@@ -1,4 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import { 
   TruckIcon, 
   BuildingStorefrontIcon, 
@@ -76,6 +78,30 @@ export default function FeatureGrid3() {
                 </Card>
               )
             })}
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="mx-auto max-w-2xl">
+            <h3 className="text-2xl font-bold tracking-tight mb-4">
+              Ready to Transform Your Logistics?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              Join hundreds of businesses already using Cossim to streamline their operations and reduce costs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="px-8">
+                <Link href="/contact">
+                  Get Started Today
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="px-8">
+                <Link href="/last-mile">
+                  Learn More
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
