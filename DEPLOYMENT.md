@@ -58,17 +58,62 @@ The following files have been configured for CapRover deployment:
 
 ## Environment Variables
 
-If your application requires environment variables, set them in the CapRover dashboard:
+Your application requires environment variables for Google Sheets integration and other features. Set them in the CapRover dashboard:
 
 1. Go to your app settings
 2. Navigate to "App Configs" tab
 3. Add environment variables in the "Environmental Variables" section
 
-Common variables you might need:
+### Required Environment Variables
+
+**Basic Configuration:**
 ```
 NODE_ENV=production
 NEXT_TELEMETRY_DISABLED=1
+NEXT_PUBLIC_FORM_MODE=sheets
 ```
+
+**Google Sheets API Configuration:**
+```
+GOOGLE_SHEETS_CLIENT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
+GOOGLE_SHEETS_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----"
+GOOGLE_SPREADSHEET_ID=your_spreadsheet_id_here
+```
+
+### Setting Up Google Sheets Integration
+
+1. **Follow Setup Guide**: Complete the steps in `GOOGLE_SHEETS_SETUP.md` to:
+   - Create a Google Cloud project
+   - Set up a service account
+   - Create and configure your Google Spreadsheet
+   - Generate the required credentials
+
+2. **Configure Environment Variables in CapRover**:
+   - Copy the values from your service account JSON file
+   - Paste the `client_email` as `GOOGLE_SHEETS_CLIENT_EMAIL`
+   - Paste the entire `private_key` (including headers) as `GOOGLE_SHEETS_PRIVATE_KEY`
+   - Get your spreadsheet ID from the URL and set as `GOOGLE_SPREADSHEET_ID`
+
+3. **Important Notes**:
+   - The private key should include `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----`
+   - Keep the `\n` characters as literal `\n` (not actual line breaks)
+   - Ensure your service account has "Editor" access to the spreadsheet
+
+### Optional Environment Variables
+
+**For Email Integration (if using Resend):**
+```
+RESEND_API_KEY=your_resend_api_key_here
+```
+
+**For No-Code Form Services (fallback):**
+```
+NEXT_PUBLIC_FORM_ENDPOINT=https://your-form-endpoint.com
+```
+
+### Environment Variables Template
+
+Reference the `.env.production.example` file for a complete template with all required variables and detailed instructions.
 
 ## Domain Configuration
 
@@ -120,6 +165,33 @@ The Dockerfile is optimized for production with:
    - Monitor resource usage
    - Consider scaling up the container
    - Check for memory leaks in logs
+
+### Google Sheets Integration Issues
+
+1. **Contact Form Submission Failures**
+   - **Error: "Google Spreadsheet ID not configured"**
+     - Verify `GOOGLE_SPREADSHEET_ID` is set in environment variables
+     - Check that the spreadsheet ID is correct (from the URL)
+   
+   - **Error: "Failed to submit contact form"**
+     - Check that `GOOGLE_SHEETS_CLIENT_EMAIL` and `GOOGLE_SHEETS_PRIVATE_KEY` are set correctly
+     - Verify the service account has "Editor" access to the spreadsheet
+     - Ensure the private key format is correct with proper `\n` characters
+   
+   - **Authentication Errors**
+     - Verify the service account email is correct
+     - Check that the private key includes the full header and footer
+     - Ensure the Google Sheets API is enabled in your Google Cloud project
+
+2. **Data Not Appearing in Spreadsheet**
+   - Check that the spreadsheet has the correct column headers (see GOOGLE_SHEETS_SETUP.md)
+   - Verify the service account has been shared with the spreadsheet
+   - Check the application logs for specific error messages
+
+3. **API Quota Issues**
+   - Monitor your Google Sheets API usage in Google Cloud Console
+   - Consider implementing rate limiting if you expect high traffic
+   - Check for any quota limits in your Google Cloud project
 
 ## Scaling
 

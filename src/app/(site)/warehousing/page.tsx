@@ -1,12 +1,12 @@
 import { Section } from '@/components/sections'
 import { load } from '@/lib/load-content'
-import { SectionHeading } from '@/components/site/section-heading'
 import { ServiceContent } from '@/types/content'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import FeaturesSection from '@/components/features-section'
+import { ServiceHero } from '@/components/service-hero'
 import { 
   ArchiveBoxIcon,
   BuildingOffice2Icon,
@@ -56,9 +56,35 @@ export default async function WarehousingPage() {
   
   return (
     <main>
-      <Section>
-        <SectionHeading title="Warehousing and Fulfillment That Actually Works" sub="Stop worrying about storage, picking, packing, and shipping. We handle it all so you can focus on what matters: growing your business." />
-      </Section>
+      {/* Hero Section */}
+      <ServiceHero
+        title="Warehousing & Fulfillment"
+        subtitle="That Actually Works"
+        description="Stop worrying about storage, picking, packing, and shipping. We handle it all so you can focus on what matters: growing your business."
+        primaryCTA={{
+          label: "Get Your Free Quote",
+          href: "/contact"
+        }}
+        secondaryCTA={{
+          label: "See Our Locations",
+          href: "/pickup-stations"
+        }}
+        benefits={[
+          {
+            icon: "ArchiveBoxIcon",
+            label: "Smart Inventory"
+          },
+          {
+            icon: "ClockIcon",
+            label: "Same-Day Processing"
+          },
+          {
+            icon: "ShieldCheckIcon",
+            label: "Secure Storage"
+          }
+        ]}
+        variant="accent"
+      />
 
       {/* Hero Content */}
       <Section className="bg-white">

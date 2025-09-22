@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans min-h-dvh antialiased bg-white text-ink-900`}>
+      <body className={`${inter.variable} font-sans min-h-dvh antialiased bg-white text-ink-900`} suppressHydrationWarning={true}>
         <SiteHeader />
         {children}
         <SiteFooter />

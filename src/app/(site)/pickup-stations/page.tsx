@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import { ServiceHero } from '@/components/service-hero'
 
 import { 
   MapPinIcon,
@@ -87,73 +88,36 @@ export default async function PickupStationsPage() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10">
-        <div className="relative z-10">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
-              Click & Collect
-              <span className="block text-primary">Delivery</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Choose from 150+ convenient pickup locations across Kenya. Secure, fast, and reliable package collection at your preferred location.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8 py-6" asChild>
-                <Link href="/pickup-stations/stations">Find Pickup Stations</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
-                <Link href="/contact">Get Started</Link>
-              </Button>
-            </div>
-            
-            {/* Quick Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-background/50 backdrop-blur">
-                <TruckIcon className="w-6 h-6 text-primary" />
-                <span className="font-medium">Fast Delivery</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-background/50 backdrop-blur">
-                <ShieldCheckIcon className="w-6 h-6 text-primary" />
-                <span className="font-medium">Secure Storage</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-background/50 backdrop-blur">
-                <MapPinIcon className="w-6 h-6 text-primary" />
-                <span className="font-medium">150+ Locations</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <ServiceHero
+        title="Click & Collect"
+        subtitle="Delivery"
+        description="Choose from 150+ convenient pickup locations across Kenya. Secure, fast, and reliable package collection at your preferred location."
+        primaryCTA={{
+          label: "Find Pickup Stations",
+          href: "/pickup-stations/stations"
+        }}
+        secondaryCTA={{
+          label: "Get Started",
+          href: "/contact"
+        }}
+        benefits={[
+          {
+            icon: "TruckIcon",
+            label: "Fast Delivery"
+          },
+          {
+            icon: "ShieldCheckIcon",
+            label: "Secure Storage"
+          },
+          {
+            icon: "MapPinIcon",
+            label: "150+ Locations"
+          }
+        ]}
+        variant="secondary"
+      />
 
-      {/* Service Tiers */}
-      <Section className="bg-ink-100">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Pickup Station Options
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Flexible pickup solutions for your customers
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {data.tiers?.map((tier, index) => (
-            <Card key={index} className={index === 1 ? 'border-primary' : ''}>
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle>{tier.name}</CardTitle>
-                  {index === 1 && <Badge>Popular</Badge>}
-                </div>
-                <CardDescription>{tier.desc}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full" variant={index === 1 ? "default" : "outline"} asChild>
-                  <Link href="/contact">{tier.cta}</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
+
 
       {/* Stats */}
       <Section>

@@ -56,6 +56,12 @@ Dockerfile*
 # Documentation
 README.md
 *.md
+GOOGLE_SHEETS_SETUP.md
+
+# Google Sheets credentials (security)
+google-credentials.json
+service-account-key.json
+*-service-account.json
 
 # CI/CD
 .github
