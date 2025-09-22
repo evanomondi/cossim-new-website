@@ -14,6 +14,9 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle,
+  SheetDescription,
+  SheetHeader,
 } from './ui/sheet'
 import { Package, ChevronDown, Menu } from 'lucide-react'
 
@@ -87,41 +90,72 @@ export default function Header2() {
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="sm" className="px-2">
-                <Menu className="h-5 w-5" />
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="px-2 relative overflow-hidden transition-all duration-200 hover:bg-accent/50"
+              >
+                <div className="relative w-5 h-5">
+                  <Menu 
+                    className={`h-5 w-5 absolute transition-all duration-300 ${
+                      isOpen ? 'rotate-90 opacity-0 scale-75' : 'rotate-0 opacity-100 scale-100'
+                    }`} 
+                  />
+                  <div 
+                    className={`absolute inset-0 transition-all duration-300 ${
+                      isOpen ? 'rotate-0 opacity-100 scale-100' : '-rotate-90 opacity-0 scale-75'
+                    }`}
+                  >
+                    <div className="w-5 h-5 flex flex-col justify-center items-center">
+                      <div className="w-4 h-0.5 bg-current transform rotate-45 translate-y-0.5"></div>
+                      <div className="w-4 h-0.5 bg-current transform -rotate-45 -translate-y-0.5"></div>
+                    </div>
+                  </div>
+                </div>
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 mt-6">
+            <SheetContent 
+              side="right" 
+              className="w-80 backdrop-blur-md bg-background/95 border-l border-border/50"
+            >
+              <SheetHeader className="border-b border-border/20 pb-4">
+                <SheetTitle className="text-left text-xl font-semibold">
+                  Navigation Menu
+                </SheetTitle>
+                <SheetDescription className="text-left text-muted-foreground">
+                  Access all pages and services from our mobile navigation menu.
+                </SheetDescription>
+              </SheetHeader>
+              <nav className="flex flex-col space-y-6 mt-8">
                 <Link 
                   href="/about" 
-                  className="text-lg font-medium hover:text-primary transition-colors"
+                  className="text-lg font-medium hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                   onClick={() => setIsOpen(false)}
                 >
                   About
                 </Link>
                 
-                <div className="space-y-2">
-                  <div className="text-lg font-medium text-muted-foreground">Services</div>
-                  <div className="pl-4 space-y-2">
+                <div className="space-y-3">
+                  <div className="text-lg font-medium text-muted-foreground px-3">Services</div>
+                  <div className="pl-4 space-y-3">
                     <Link 
                       href="/last-mile" 
-                      className="block text-base hover:text-primary transition-colors"
+                      className="block text-base hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                       onClick={() => setIsOpen(false)}
                     >
                       Last Mile Delivery
                     </Link>
                     <Link 
                       href="/pickup-stations" 
-                      className="block text-base hover:text-primary transition-colors"
+                      className="block text-base hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                       onClick={() => setIsOpen(false)}
                     >
                       Pickup Stations
                     </Link>
                     <Link 
                       href="/warehousing" 
-                      className="block text-base hover:text-primary transition-colors"
+                      className="block text-base hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                       onClick={() => setIsOpen(false)}
                     >
                       Warehousing & Fulfillment
@@ -131,7 +165,7 @@ export default function Header2() {
                 
                 <Link 
                   href="/track" 
-                  className="flex items-center gap-2 text-lg font-medium hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-lg font-medium hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                   onClick={() => setIsOpen(false)}
                 >
                   <Package className="h-5 w-5" />
@@ -139,11 +173,29 @@ export default function Header2() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="text-lg font-medium hover:text-primary transition-colors"
+                  className="text-lg font-medium hover:text-primary transition-all duration-200 hover:translate-x-1 hover:bg-accent/20 rounded-lg px-3 py-2 -mx-3"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
                 </Link>
+                
+                <div className="mt-8 pt-6 border-t border-border/20">
+                  <div className="space-y-4">
+                    <div className="text-sm text-muted-foreground">
+                      Get in touch
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <span>📧</span>
+                        <span>hello@cossim.com</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <span>📞</span>
+                        <span>+1 (555) 123-4567</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
