@@ -50,7 +50,7 @@ export default function TermsPage() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Governing Law</h2>
         <p>These terms are governed by Kenyan law. Disputes will be resolved through Kenyan courts or agreed arbitration.</p>
-        <p>Last updated: {new Date().toISOString().slice(0, 10)}</p>
+        <p>Last updated: 2024-01-15</p>
       </section>
     </main>
   )

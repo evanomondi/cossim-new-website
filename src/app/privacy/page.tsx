@@ -36,7 +36,7 @@ export default function PrivacyPage() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Legal Information</h2>
         <p>This policy is governed by Kenyan law. Any disputes will be resolved in Kenyan courts.</p>
-        <p>Last updated: {new Date().toISOString().slice(0, 10)}</p>
+        <p>Last updated: 2024-01-15</p>
       </section>
     </main>
   )

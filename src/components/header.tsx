@@ -15,6 +15,11 @@ const menuItems = [
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
+    const [isMounted, setIsMounted] = React.useState(false)
+
+    React.useEffect(() => {
+        setIsMounted(true)
+    }, [])
     return (
         <header>
             <nav

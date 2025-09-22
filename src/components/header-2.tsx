@@ -22,6 +22,11 @@ import { Package, ChevronDown, Menu } from 'lucide-react'
 
 export default function Header2() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [isMounted, setIsMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -39,52 +44,50 @@ export default function Header2() {
         </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 items-center justify-end space-x-2">
-          <nav className="flex items-center space-x-6 text-sm font-medium mr-4">
-            <Link href="/about" className="hover:text-primary transition-colors">
-              About
-            </Link>
-            
-            {/* Services Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 hover:text-primary transition-colors">
-                Services
-                <ChevronDown className="h-3 w-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
-                <DropdownMenuItem asChild>
-                  <Link href="/last-mile" className="w-full">
-                    Last Mile Delivery
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/pickup-stations" className="w-full">
-                    Pickup Stations
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/warehousing" className="w-full">
-                    Warehousing & Fulfillment
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            
-            <Link href="/track" className="flex items-center gap-1 hover:text-primary transition-colors">
-              <Package className="h-4 w-4" />
-              Track Package
-            </Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button size="sm" asChild>
-            <Link href="/contact">Get Started</Link>
-          </Button>
+        <div className="hidden md:flex flex-1 items-center justify-end space-x-6 text-sm font-medium">
+          <Link href="/about" className="hover:text-primary transition-colors">
+            About
+          </Link>
+          
+          {/* Services Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-primary transition-colors">
+              Services
+              <ChevronDown className="h-3 w-3" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-56">
+              <DropdownMenuItem asChild>
+                <Link href="/last-mile" className="w-full">
+                  Last Mile Delivery
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/pickup-stations" className="w-full">
+                  Pickup Stations
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/warehousing" className="w-full">
+                  Warehousing & Fulfillment
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
+          <Link href="/track" className="flex items-center gap-1 hover:text-primary transition-colors">
+            <Package className="h-4 w-4" />
+            Track Package
+          </Link>
+          <Link href="/contact" className="hover:text-primary transition-colors">
+            Contact
+          </Link>
+          <Link href="/contact" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+            Get Started
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="flex md:hidden flex-1 items-center justify-end space-x-2">
+        <div className="flex md:hidden items-center space-x-2">
           <Button size="sm" asChild className="mr-2">
             <Link href="/contact">Get Started</Link>
           </Button>
@@ -178,6 +181,13 @@ export default function Header2() {
                 >
                   Contact
                 </Link>
+                <Link 
+                  href="/contact" 
+                  className="text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 hover:translate-x-1 rounded-lg px-3 py-2 -mx-3"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
                 
                 <div className="mt-8 pt-6 border-t border-border/20">
                   <div className="space-y-4">
@@ -187,11 +197,11 @@ export default function Header2() {
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <span>📧</span>
-                        <span>hello@cossim.com</span>
+                        <span>info@cossim.co.ke</span>
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <span>📞</span>
-                        <span>+1 (555) 123-4567</span>
+                        <span>+254</span>
                       </div>
                     </div>
                   </div>

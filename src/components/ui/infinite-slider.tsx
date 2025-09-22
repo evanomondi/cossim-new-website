@@ -23,11 +23,17 @@ export function InfiniteSlider({
   reverse = false,
   className,
 }: InfiniteSliderProps) {
+  const [isMounted, setIsMounted] = useState(false);
   const [currentSpeed, setCurrentSpeed] = useState(speed);
   const [ref, { width, height }] = useMeasure();
   const translation = useMotionValue(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [key, setKey] = useState(0);
+
+  // Prevent hydration mismatch by only running animations on client
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     let controls;
@@ -89,6 +95,25 @@ export function InfiniteSlider({
         },
       }
     : {};
+
+  // Prevent hydration mismatch by showing static content during SSR
+  if (!isMounted) {
+    return (
+      <div className={cn('overflow-hidden', className)}>
+        <div
+          className='flex w-max'
+          style={{
+            gap: `${gap}px`,
+            flexDirection: direction === 'horizontal' ? 'row' : 'column',
+          }}
+          ref={ref}
+        >
+          {children}
+          {children}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={cn('overflow-hidden', className)}>
