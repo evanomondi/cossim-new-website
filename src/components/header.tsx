@@ -33,6 +33,7 @@ export const HeroHeader = () => {
                                 aria-label="home"
                                 className="flex items-center space-x-2">
                                 <Logo />
+                                <span className="text-h5">Cossim</span>
                             </Link>
 
                             <button

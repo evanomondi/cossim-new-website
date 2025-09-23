@@ -22,7 +22,6 @@ export function ContactForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log('Form submission started')
     setLoading(true)
     
     const fd = new FormData(e.currentTarget)
@@ -32,8 +31,6 @@ export function ContactForm() {
     
     const payload = Object.fromEntries(fd.entries())
     const mode = process.env.NEXT_PUBLIC_FORM_MODE || 'nocode'
-    console.log('Form mode:', mode)
-    console.log('Form payload:', payload)
     
     try {
       if (mode === 'nocode') {
@@ -48,7 +45,6 @@ export function ContactForm() {
         })
       } else if (mode === 'sheets') {
         // Submit to Google Sheets
-        console.log('Submitting to Google Sheets...')
         const response = await fetch('/api/sheets', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -63,21 +59,15 @@ export function ContactForm() {
           })
         })
         
-        console.log('Response status:', response.status)
         if (!response.ok) {
-          const errorText = await response.text()
-          console.error('API Error:', errorText)
-          throw new Error(`Failed to submit to Google Sheets: ${response.status}`)
+          throw new Error('Failed to submit to Google Sheets')
         }
-        console.log('Successfully submitted to Google Sheets')
       }
       setSent(true)
     } catch (error) {
       console.error('Form submission error:', error)
-      console.error('Error details:', error instanceof Error ? error.message : 'Unknown error')
-      alert(`Failed to send message: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`)
+      alert('Failed to send message. Please try again.')
     } finally {
-      console.log('Form submission completed, setting loading to false')
       setLoading(false)
     }
   }

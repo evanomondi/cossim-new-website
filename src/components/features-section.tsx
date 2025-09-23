@@ -24,11 +24,11 @@ export default function FeaturesSection({
     <section className={`bg-gray-50 py-16 md:py-32 dark:bg-transparent ${className}`}>
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <h2 className="text-h2 mb-4">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-lg text-muted-foreground">
+            <p className="text-body-lg text-muted">
               {subtitle}
             </p>
           )}
@@ -45,13 +45,13 @@ export default function FeaturesSection({
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <div className="relative z-10 space-y-2 text-center">
-                      <h3 className="text-lg font-medium transition dark:text-white">
-                        {feature.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {feature.description}
-                      </p>
-                    </div>
+                <h3 className="text-h5 transition dark:text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-body-sm text-muted">
+                  {feature.description}
+                </p>
+              </div>
                   </CardContent>
                 </Card>
               )

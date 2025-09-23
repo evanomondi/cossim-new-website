@@ -21,31 +21,31 @@ export default function Footer2() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold">Services</h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/last-mile" className="text-muted-foreground hover:text-foreground">Last Mile Delivery</Link></li>
-              <li><Link href="/pickup-stations" className="text-muted-foreground hover:text-foreground">Pickup Stations</Link></li>
-              <li><Link href="/warehousing" className="text-muted-foreground hover:text-foreground">Warehousing</Link></li>
-            </ul>
+            <h3 className="text-h5">Services</h3>
+            <ul className="mt-4 space-y-2">
+                <li><Link href="/last-mile" className="text-body-sm text-muted hover:text-foreground">Last Mile Delivery</Link></li>
+                <li><Link href="/warehousing" className="text-body-sm text-muted hover:text-foreground">Warehousing</Link></li>
+                <li><Link href="/freight" className="text-body-sm text-muted hover:text-foreground">Freight</Link></li>
+              </ul>
           </div>
           <div>
-            <h3 className="font-semibold">Company</h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">About</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">Careers</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold">Legal</h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy</Link></li>
-              <li><Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link></li>
-            </ul>
+            <h3 className="text-h5">Company</h3>
+            <ul className="mt-4 space-y-2">
+                <li><Link href="/contact" className="text-body-sm text-muted hover:text-foreground">About</Link></li>
+                <li><Link href="/contact" className="text-body-sm text-muted hover:text-foreground">Contact</Link></li>
+                <li><Link href="/careers" className="text-body-sm text-muted hover:text-foreground">Careers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-h5">Legal</h3>
+              <ul className="mt-4 space-y-2">
+                <li><Link href="/privacy" className="text-body-sm text-muted hover:text-foreground">Privacy</Link></li>
+                <li><Link href="/terms" className="text-body-sm text-muted hover:text-foreground">Terms</Link></li>
+              </ul>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 Cossim. All rights reserved.</p>
+        <div className="mt-8 border-t pt-8 text-center">
+          <p className="text-body-sm text-muted">&copy; 2024 Cossim. All rights reserved.</p>
         </div>
       </div>
     </footer>

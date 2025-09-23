@@ -64,7 +64,7 @@ export function ServiceHero({
       <Section className="relative">
         <div className="relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
+            <h1 className="text-display-sm mb-6">
               {title}
               {subtitle && (
                 <span className={cn(
@@ -77,7 +77,7 @@ export function ServiceHero({
                 </span>
               )}
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-body-lg text-muted mb-8 max-w-2xl mx-auto">
               {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

@@ -71,6 +71,73 @@ body {
 
 @layer base {
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 font-sans;
   }
+  
+  /* Typography Scale - Modern UI Best Practices */
+  h1, .text-h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+  }
+  
+  h2, .text-h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight;
+  }
+  
+  h3, .text-h3 {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight leading-snug;
+  }
+  
+  h4, .text-h4 {
+    @apply text-xl sm:text-2xl font-semibold tracking-tight leading-snug;
+  }
+  
+  h5, .text-h5 {
+    @apply text-lg sm:text-xl font-semibold leading-snug;
+  }
+  
+  h6, .text-h6 {
+    @apply text-base sm:text-lg font-semibold leading-snug;
+  }
+  
+  /* Body Text Styles */
+  .text-body-lg {
+    @apply text-lg leading-relaxed font-normal;
+  }
+  
+  .text-body {
+    @apply text-base leading-relaxed font-normal;
+  }
+  
+  .text-body-sm {
+    @apply text-sm leading-relaxed font-normal;
+  }
+  
+  .text-caption {
+    @apply text-xs leading-normal font-medium tracking-wide uppercase;
+  }
+  
+  /* Display Text for Hero Sections */
+  .text-display {
+    @apply text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-none;
+  }
+  
+  .text-display-sm {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+  }
+}
+
+@layer utilities {
+  /* Font Weight Utilities */
+  .font-light { font-weight: 300; }
+  .font-normal { font-weight: 400; }
+  .font-medium { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold { font-weight: 700; }
+  .font-extrabold { font-weight: 800; }
+  
+  /* Text Color Utilities for Brand Consistency */
+  .text-primary { color: rgb(var(--brand-primary)); }
+  .text-secondary { color: rgb(var(--brand-secondary)); }
+  .text-muted { color: rgb(var(--ink-600)); }
+  .text-subtle { color: rgb(var(--ink-600)); }
 }
