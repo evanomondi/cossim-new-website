@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import type { Route } from 'next'
 import LogoCloud3 from '@/components/logo-cloud-3'
+import HeroSlider from '@/components/hero-slider'
 import { motion } from 'framer-motion'
 
 interface CTA {
@@ -216,61 +217,7 @@ export default function HeroSection4({
           </div>
           
           {/* Visual Element */}
-          <motion.div 
-            className="mt-12 lg:mt-0 lg:flex-1"
-            variants={illustrationVariants}
-          >
-            <div className="relative mx-auto max-w-lg">
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl"
-                variants={backgroundVariants}
-                animate={{
-                  rotate: [3, 6, 3],
-                  scale: [1, 1.02, 1],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <motion.div 
-                className="relative bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl p-8 lg:p-12 flex items-center justify-center"
-                animate={{
-                  boxShadow: [
-                    "0 10px 25px rgba(0,0,0,0.1)",
-                    "0 20px 40px rgba(0,0,0,0.15)",
-                    "0 10px 25px rgba(0,0,0,0.1)"
-                  ]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <motion.img 
-                  src="/package-delivery.svg" 
-                  alt="Package delivery illustration" 
-                  className="w-full h-auto max-w-sm"
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 2, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotate: 5,
-                    transition: { duration: 0.3 }
-                  }}
-                />
-              </motion.div>
-            </div>
-          </motion.div>
+          <HeroSlider />
         </motion.div>
         
         {/* Logo Cloud */}
