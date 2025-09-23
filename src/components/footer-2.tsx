@@ -25,15 +25,14 @@ export default function Footer2() {
             <ul className="mt-4 space-y-2">
                 <li><Link href="/last-mile" className="text-body-sm text-muted hover:text-foreground">Last Mile Delivery</Link></li>
                 <li><Link href="/warehousing" className="text-body-sm text-muted hover:text-foreground">Warehousing</Link></li>
-                <li><Link href="/freight" className="text-body-sm text-muted hover:text-foreground">Freight</Link></li>
+                <li><Link href="/pickup-stations" className="text-body-sm text-muted hover:text-foreground">Pickup Stations</Link></li>
               </ul>
           </div>
           <div>
             <h3 className="text-h5">Company</h3>
             <ul className="mt-4 space-y-2">
-                <li><Link href="/contact" className="text-body-sm text-muted hover:text-foreground">About</Link></li>
+                <li><Link href="/about" className="text-body-sm text-muted hover:text-foreground">About</Link></li>
                 <li><Link href="/contact" className="text-body-sm text-muted hover:text-foreground">Contact</Link></li>
-                <li><Link href="/careers" className="text-body-sm text-muted hover:text-foreground">Careers</Link></li>
               </ul>
             </div>
             <div>

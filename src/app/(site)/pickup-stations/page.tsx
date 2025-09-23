@@ -112,12 +112,16 @@ export default async function PickupStationsPage() {
           }
         ]}
         variant="secondary"
+        backgroundImage={{
+          src: "/Cossim- Click-and Collect.png",
+          alt: "Cossim Click and Collect Service - Customer receiving package at pickup station"
+        }}
       />
 
 
 
       {/* Stats */}
-      <Section>
+      <Section className="relative z-20 bg-background">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center">
             <h2 className="text-4xl font-medium lg:text-5xl">Our Network in Numbers</h2>
@@ -142,7 +146,7 @@ export default async function PickupStationsPage() {
       </Section>
 
       {/* How It Works */}
-      <Section>
+      <Section className="relative z-20 bg-background">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             How Pickup Stations Work
@@ -171,7 +175,7 @@ export default async function PickupStationsPage() {
       </Section>
 
       {/* Benefits */}
-      <Section className="bg-ink-100">
+      <Section className="relative z-20 bg-ink-100">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
@@ -206,7 +210,7 @@ export default async function PickupStationsPage() {
       </Section>
 
       {/* Customer Testimonials */}
-      <Section>
+      <Section className="relative z-20 bg-background">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             What Our Customers Say
@@ -238,7 +242,7 @@ export default async function PickupStationsPage() {
       </Section>
 
       {/* FAQ */}
-      <Section>
+      <Section className="relative z-20 bg-background">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Frequently Asked Questions
@@ -267,7 +271,7 @@ export default async function PickupStationsPage() {
       </Section>
 
       {/* CTA */}
-      <Section className="bg-gradient-to-r from-primary to-primary/80 text-white">
+      <Section className="relative z-20 bg-gradient-to-r from-primary to-primary/80 text-white">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Ready to Get Started?
