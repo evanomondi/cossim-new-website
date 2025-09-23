@@ -81,14 +81,20 @@ export default async function LastMilePage() {
             label: "Complete Solutions"
           }
         ]}
+        backgroundImage={{
+          src: "/Cossim-Delivery.png",
+          alt: "Cossim delivery service in action"
+        }}
         variant="primary"
       />
 
       {/* Content Section with logistics overview */}
-      <ContentSection />
+      <div className="relative z-20 bg-background">
+        <ContentSection />
+      </div>
 
       {/* Service Types */}
-      <Section className="py-16 bg-ink-100">
+      <Section className="relative z-20 py-16 bg-ink-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-4">Our Logistics Services</h2>
@@ -118,7 +124,7 @@ export default async function LastMilePage() {
       </Section>
 
       {/* Dedicated Services Section */}
-      <Section className="py-16">
+      <Section className="relative z-20 py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -180,7 +186,7 @@ export default async function LastMilePage() {
       </Section>
 
       {/* Features */}
-      <Section className="py-16">
+      <Section className="relative z-20 py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Logistics Services</h2>
@@ -212,7 +218,7 @@ export default async function LastMilePage() {
       </Section>
 
       {/* FAQ Section */}
-      <Section className="py-16 bg-gray-50">
+      <Section className="relative z-20 py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Common Questions</h2>
@@ -278,7 +284,7 @@ export default async function LastMilePage() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="py-16 bg-primary text-white">
+      <Section className="relative z-20 py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your Logistics Partnership</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">

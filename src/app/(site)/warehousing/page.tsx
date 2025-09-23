@@ -77,11 +77,15 @@ export default async function WarehousingPage() {
             label: "Secure Storage"
           }
         ]}
+        backgroundImage={{
+          src: "/Cossim-Warehouse.png",
+          alt: "Cossim warehouse operations with organized inventory"
+        }}
         variant="accent"
       />
 
       {/* Hero Content */}
-      <Section className="bg-white">
+      <Section className="relative z-20 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto">
             <h2 className="text-2xl font-bold mb-6">Here&apos;s the thing about order fulfillment:</h2>
@@ -117,7 +121,7 @@ export default async function WarehousingPage() {
       </Section>
       
       {/* Service Tiers */}
-      <Section className="bg-ink-100">
+      <Section className="relative z-20 bg-ink-100">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Choose Your Fulfillment Solution
@@ -187,13 +191,15 @@ export default async function WarehousingPage() {
       </Section>
 
       {/* Features */}
-      <FeaturesSection 
-        title="Why Businesses Choose Our Fulfillment Services"
-        features={warehousingFeatures}
-      />
+      <div className="relative z-20 bg-background">
+        <FeaturesSection 
+          title="Why Businesses Choose Our Fulfillment Services"
+          features={warehousingFeatures}
+        />
+      </div>
 
       {/* Process */}
-      <Section className="bg-ink-100">
+      <Section className="relative z-20 bg-ink-100">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             From Your Warehouse to Your Customer&apos;s Door
@@ -235,7 +241,7 @@ export default async function WarehousingPage() {
       </Section>
 
       {/* FAQ */}
-      <Section>
+      <Section className="relative z-20 bg-background">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Common Questions About Order Fulfillment
@@ -302,29 +308,31 @@ export default async function WarehousingPage() {
       </Section>
 
       {/* CTA */}
-      <Section className="bg-ink-100">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Ready to Stop Worrying About Fulfillment?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Join hundreds of businesses who trust us with their order fulfillment. 
-            Same-day processing, 99.99% accuracy, and transparent pricing. 
-            <strong> Your customers will notice the difference.</strong>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/contact">Get Your Free Quote</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/pickup-stations">See Our Locations</Link>
-            </Button>
+      <div className="relative z-20">
+        <Section className="bg-ink-100">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              Ready to Stop Worrying About Fulfillment?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Join hundreds of businesses who trust us with their order fulfillment. 
+              Same-day processing, 99.99% accuracy, and transparent pricing. 
+              <strong> Your customers will notice the difference.</strong>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link href="/contact">Get Your Free Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/pickup-stations">See Our Locations</Link>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              No setup fees • No long-term contracts • Free integration support
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            No setup fees • No long-term contracts • Free integration support
-          </p>
-        </div>
-      </Section>
+        </Section>
+      </div>
     </main>
   )
 }

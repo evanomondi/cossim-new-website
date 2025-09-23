@@ -87,7 +87,7 @@ export default async function PickupStationsPage() {
       {/* Hero Section */}
       <ServiceHero
         title="Click & Collect"
-        subtitle="Delivery"
+        subtitle="Solution"
         description="Choose from 150+ convenient pickup locations across Kenya. Secure, fast, and reliable package collection at your preferred location."
         primaryCTA={{
           label: "Find Pickup Stations",
